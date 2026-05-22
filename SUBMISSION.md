@@ -1,23 +1,38 @@
-# Submission
+# Submission Details
 
-Completed Modules:
+## Candidate Information
 
-[✓] Terraform Infrastructure
+Name: Sarthak Chaudhari
 
-[✓] LocalStack Integration
+Role: DevOps Intern Assignment
 
-[✓] Flask Container
+---
 
-[✓] Docker Compose
+## Repository Link
 
-[✓] Prometheus
+https://github.com/SarthakChaudhari-2905/NimbusKart-DevOps.git
 
-[✓] Grafana
+---
 
-[✓] Janitor Service
+## Implemented Features
 
-[✓] Unit Tests
+- Terraform Infrastructure
+- Dockerized Flask Application
+- Prometheus Monitoring
+- Grafana Dashboard
+- Janitor Utility using boto3
+- GitHub Actions CI Pipeline
+- LocalStack Integration
 
-[✓] GitHub Actions
+---
 
-Repository Ready
+## Notes
+
+- LocalStack Community Edition does not support some AWS Pro services like ELB and AutoScaling.
+- Infrastructure testing was performed successfully for supported services.
+
+---
+
+## Status
+
+Assignment Completed Successfully
