@@ -1,36 +1,47 @@
-from unittest.mock import patch
-import sys
-import os
+import boto3
+from constants import *
 
-sys.path.append(
-    os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..")
-    )
+ec2 = boto3.client(
+    "ec2",
+    endpoint_url=LOCALSTACK_URL,
+    region_name=AWS_REGION,
+    aws_access_key_id=ACCESS_KEY,
+    aws_secret_access_key=SECRET_KEY
 )
 
-from janitor import get_instances
+def get_instances():
+
+    response = ec2.describe_instances()
+
+    instances = []
+
+    for reservation in response["Reservations"]:
+
+        for instance in reservation["Instances"]:
+
+            instances.append(
+                {
+                    "InstanceId": instance["InstanceId"],
+                    "State": instance["State"]["Name"]
+                }
+            )
+
+    return instances
 
 
-@patch("janitor.ec2.describe_instances")
-def test_instances(mock_describe):
-
-    mock_describe.return_value = {
-        "Reservations": [
-            {
-                "Instances": [
-                    {
-                        "InstanceId": "i-123456789",
-                        "State": {
-                            "Name": "running"
-                        }
-                    }
-                ]
-            }
-        ]
-    }
+def main():
 
     data = get_instances()
 
-    assert len(data) > 0
-    assert data[0]["id"] == "i-123456789"
-    assert data[0]["state"] == "running"
+    print("\nNimbusKart Janitor Report\n")
+
+    for i in data:
+
+        print(
+            f"Instance: {i['InstanceId']} | State: {i['State']}"
+        )
+
+
+if __name__ == "__main__":
+
+    main()
