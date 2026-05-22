@@ -33,20 +33,23 @@ This project demonstrates a DevOps workflow using:
 ---
 
 ## Folder Structure
+
+```text
 devops-assignment/
-│── .github/
+│
+├── .github/
 │   └── workflows/
 │       └── ci.yml
 │
-│── app/
+├── app/
 │   ├── app.py
 │   ├── Dockerfile
 │   └── requirements.txt
 │
-│── docs/
+├── docs/
 │   └── walkthrough.md
 │
-│── janitor/
+├── janitor/
 │   ├── janitor.py
 │   ├── constants.py
 │   ├── report_generator.py
@@ -55,14 +58,14 @@ devops-assignment/
 │   └── tests/
 │       └── test_janitor.py
 │
-│── monitoring/
+├── monitoring/
 │   └── prometheus.yml
 │
-│── samples/
+├── samples/
 │   ├── report.example.json
 │   └── report.example.md
 │
-│── terraform/
+├── terraform/
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── outputs.tf
@@ -72,11 +75,12 @@ devops-assignment/
 │           ├── variables.tf
 │           └── outputs.tf
 │
-│── .gitignore
-│── DESIGN.md
-│── docker-compose.yml
-│── README.md
+├── .gitignore
+├── DESIGN.md
+├── docker-compose.yml
+├── README.md
 └── SUBMISSION.md
+```
 
 ---
 
