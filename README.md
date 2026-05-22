@@ -33,94 +33,50 @@ This project demonstrates a DevOps workflow using:
 ---
 
 ## Folder Structure
-C:.                    
-│   .gitignore
-│   DESIGN.md                             
-│   docker-compose.yml
-│   README.md
-│   SUBMISSION.md
-│   
-├───.github
-│   └───workflows
-│           ci.yml
-│           
-├───app
-│       app.py
-│       Dockerfile
-│       requirements.txt
-│       
-├───docs
-│       walkthrough.md
-│       
-├───janitor
-│   │   constants.py
-│   │   janitor.py
-│   │   report_generator.py
-│   │   requirements.txt
-│   │   utils.py
-│   │   
-│   ├───.pytest_cache
-│   │   │   .gitignore
-│   │   │   CACHEDIR.TAG
-│   │   │   README.md
-│   │   │   
-│   │   └───v
-│   │       └───cache
-│   │               nodeids
-│   │               
-│   ├───tests
-│   │   │   test_janitor.py
-│   │   │   
-│   │   ├───.pytest_cache
-│   │   │   │   .gitignore
-│   │   │   │   CACHEDIR.TAG
-│   │   │   │   README.md
-│   │   │   │   
-│   │   │   └───v
-│   │   │       └───cache
-│   │   │               lastfailed
-│   │   │               nodeids
-│   │   │               
-│   │   └───__pycache__
-│   │           test_janitor.cpython-310-pytest-9.0.3.pyc
-│   │           
-│   └───__pycache__
-│           constants.cpython-310.pyc
-│           janitor.cpython-310.pyc
-│           
-├───monitoring
-│       prometheus.yml
-│       
-├───samples
-│       report.example.json
-│       report.example.md
-│       
-└───terraform
-    │   .terraform.lock.hcl
-    │   main.tf
-    │   outputs.tf
-    │   terraform.tfstate
-    │   terraform.tfstate.backup
-    │   variables.tf
-    │   
-    ├───.terraform
-    │   ├───modules
-    │   │       modules.json
-    │   │       
-    │   └───providers
-    │       └───registry.terraform.io
-    │           └───hashicorp
-    │               └───aws
-    │                   └───6.46.0
-    │                       └───windows_386
-    │                               LICENSE.txt
-    │                               terraform-provider-aws_v6.46.0_x5.exe
-    │                               
-    └───modules
-        └───network
-                main.tf
-                outputs.tf
-                variables.tf
+devops-assignment/
+│── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+│── app/
+│   ├── app.py
+│   ├── Dockerfile
+│   └── requirements.txt
+│
+│── docs/
+│   └── walkthrough.md
+│
+│── janitor/
+│   ├── janitor.py
+│   ├── constants.py
+│   ├── report_generator.py
+│   ├── utils.py
+│   ├── requirements.txt
+│   └── tests/
+│       └── test_janitor.py
+│
+│── monitoring/
+│   └── prometheus.yml
+│
+│── samples/
+│   ├── report.example.json
+│   └── report.example.md
+│
+│── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── modules/
+│       └── network/
+│           ├── main.tf
+│           ├── variables.tf
+│           └── outputs.tf
+│
+│── .gitignore
+│── DESIGN.md
+│── docker-compose.yml
+│── README.md
+└── SUBMISSION.md
 
 ---
 
